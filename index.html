@@ -12,7 +12,7 @@
 			border: 1px solid black;
 		}
 		.row{
-			min-height: 200px;
+			min-height: 100px;
 		}
 
 		.container-fluid {
@@ -23,9 +23,10 @@
 			background: grey;
 		}
 		
-		.rightImage{
+		.rightImageIn{
 			background: red;
-			float: right;
+			display: inline-block;
+			/*float: right;*/
 		}
 
 
@@ -37,10 +38,14 @@
 			padding-left: 0px;
 			padding-right: 0px;
 		}
+
+		.row2 .col-md-8,.rightImage{
+			padding: 20px;
+		}
 	</style>
 	<body>
 		<div class="container-fluid">
-			<div class="row">
+			<div class="row row1">
 				<div class="col-md-2">
 					<p>Левая колонка</p>
 				</div>
@@ -53,19 +58,30 @@
 					<p>Правая колонка</p>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row row2">
 				<div class="col-md-10 col-md-offset-1">
-					<ul>
+					<div class="col-md-8">
+						<p>Новости в вашем городе <small>31 декабря, четверг 19:22</small></p>
+						<ol>
+							<li>Что то в списке</li>
+							<li>Что то в списке</li>
+							<li>Что то в списке</li>
+							<li>Что то в списке</li>
+							<li>Что то в списке</li>
+						</ol>
+					</div>
+					<div class="col-md-4 rightImage">
+						<div class="rightImageIn"><p>Тут тоже какой то блок</p></div>
+					</div>
+				</div>
+				<div class="col-md-10 col-md-offset-1">
+					<ul class="list-inline">
 						<li>Что то в списке</li>
 						<li>Что то в списке</li>
 						<li>Что то в списке</li>
 						<li>Что то в списке</li>
 						<li>Что то в списке</li>
 					</ul>
-					<div class="rightImage"><p>Тут тоже какой то блок</p></div>
-				</div>
-				<div class="col-md-10 col-md-offset-1">
-					<p>Тут будет список в линию</p>
 					<input id="centerInput" type="text">Длинный инпут
 					<p>Ещё какой то текст</p>
 				</div>
