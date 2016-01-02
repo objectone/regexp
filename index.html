@@ -8,20 +8,38 @@
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 	</head>
 	<style>
+		.container,.row,.col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-10{
+			border: 1px solid black;
+		}
+		.row{
+			min-height: 200px;
+		}
+
+		.container-fluid {
+		    background: #B5E64F;
+		}
+
 		.centerBlock{
 			background: grey;
 		}
+		
 		.rightImage{
 			background: red;
 			float: right;
 		}
 
-		.container,.row,.col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8{
-			border: 1px solid black;
+
+		#centerInput{
+			width: 100%;
+		}
+
+		.blockNews,.centerBlock{
+			padding-left: 0px;
+			padding-right: 0px;
 		}
 	</style>
 	<body>
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-2">
 					<p>Левая колонка</p>
@@ -36,7 +54,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-8 col-md-offset-2">
+				<div class="col-md-10 col-md-offset-1">
 					<ul>
 						<li>Что то в списке</li>
 						<li>Что то в списке</li>
@@ -46,8 +64,35 @@
 					</ul>
 					<div class="rightImage"><p>Тут тоже какой то блок</p></div>
 				</div>
+				<div class="col-md-10 col-md-offset-1">
+					<p>Тут будет список в линию</p>
+					<input id="centerInput" type="text">Длинный инпут
+					<p>Ещё какой то текст</p>
+				</div>
 			</div>
-				<p>А что если создать для каждого блока цвет и записать как preStyleForBoots, т.е. col-md-8 - красный, col-md-7 - оранжевый и т.д.</p>
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1 blockNews">
+					<div class="col-md-4"><ul>
+						<li>какой то текст</li>
+						<li>какой то текст</li>
+						<li>какой то текст</li>
+						<li>какой то текст</li>
+					</ul></div>
+					<div class="col-md-4"><ul>
+						<li>какой то текст</li>
+						<li>какой то текст</li>
+						<li>какой то текст</li>
+						<li>какой то текст</li>
+					</ul></div>
+					<div class="col-md-4"><ul>
+						<li>какой то текст</li>
+						<li>какой то текст</li>
+						<li>какой то текст</li>
+						<li>какой то текст</li>
+					</ul></div>
+				</div>
+			</div>
+			<p>А что если создать для каждого блока цвет и записать как preStyleForBoots, т.е. col-md-8 - красный, col-md-7 - оранжевый и т.д.</p>
 		</div>
 		<script src="js/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
